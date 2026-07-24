@@ -25,19 +25,6 @@ The project focuses on creating a clean, responsive, and engaging website using 
 - JavaScript (ES6)
 
 
-## Project Structure
-
-```
-Wajha-Tourism-Platform/
-│
-├── index.html
-├── pages/
-├── css/
-├── js/
-├── images/
-└── README.md
-```
-
 ## Getting Started
 
 ### Clone the repository
@@ -48,7 +35,7 @@ git clone https://github.com/alshargabisama/Wajha-Tourism-platform.git
 
 ### Open the project
 
-Simply open the project folder and launch **index.html** in your browser.
+Simply open the project folder and launch **login.html** in your browser.
 
 ---
 
