@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الحجز | وجهه للسياحة</title>
+    <link rel="stylesheet" href="styles/form.css"> 
+    <!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body> 
+    <!-- ================= NAVBAR ================= -->
+
+<!-- ================= NAVBAR (FOR OTHER PAGES) ================= -->
+<nav class="navbar">
+
+    <div class="logo">
+        <span>WAJHA</span>
+        <h2>وجهة</h2>
+    </div>
+
+    <ul class="nav-links">
+       
+        <li><a href="home.html">الرئيسية</a></li>
+        
+       
+        <li><a href="home.html#packages">الباقات</a></li>
+        
+       
+        <li><a href="my-trips.html">رحلاتي</a></li>
+        
+      
+        <li><a href="home.html#about">من نحن</a></li>
+       
+        <li><a href="home.html#footer">تواصل معنا</a></li>
+    </ul>
+
+    
+
+</nav>
+
+    <div class="page-wrapper">
+        <aside class="sidebar-image">
+            <div class="overlay">
+                <h2>رحلة الأحلام تبدأ من هنا</h2>
+                <p>استمتع بأفضل الشواطئ والخدمات السياحية</p>
+            </div>
+        </aside>
+
+        <main class="form-container">
+            <h1 class="main-title">تأكيد الحجز الآن</h1>
+
+            <form id="booking-form">
+                <div class="section">
+                    <h3 class="section-head">1- المعلومات الشخصية</h3>
+                    <div class="input-grid">
+                        <div class="field">
+                            <label>الاسم الكامل</label>
+                            <input type="text" placeholder="أدخل اسمك كما في الهوية" required>
+                        </div>
+                        <div class="field">
+                            <label>رقم الهاتف</label>
+                            <input type="text" placeholder="7xxxxxxxx" required>
+                        </div>
+                    </div>
+                    <div class="input-grid">
+                        <div class="field">
+                            <label>رقم الهوية / الجواز</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="field">
+                            <label>تاريخ السفر</label>
+                          <input type="date" id="travel-date" required>
+                        </div>
+                    </div>
+                  <div class="custom-file-upload">
+    <label for="passport-upload" class="upload-label">
+        📎 اختر صورة الجواز أو الهوية
+    </label>
+
+    <input 
+        type="file" 
+        id="passport-upload"
+        accept="image/*"
+        required
+    >
+</div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-head">2- معلومات الرحلة</h3>
+                    <div class="field">
+                        <label>نوع الرحلة</label>
+                        <select id="trip-type" onchange="checkTripType()">
+                            <option value="individual">فردية</option>
+                            <option value="family">عائلية</option>
+                            <option value="group">مجموعة</option>
+                        </select>
+                    </div>
+
+                    <div id="extra-fields" class="hidden-fields">
+                        <div class="input-grid">
+                            <div class="field">
+                                <label>عدد البالغين (400$)</label>
+                                <input type="number" id="adults" value="1" min="1" oninput="calculateTotal()">
+                            </div>
+                            <div class="field">
+                                <label>عدد الأطفال (200$)</label>
+                                <input type="number" id="children" value="0" min="0" oninput="calculateTotal()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-display">
+                        <span>إجمالي سعر الباقة النهائي:</span>
+                        <strong id="total-price">400</strong> <strong>$</strong>
+                    </div>
+
+                    <div class="note-box">
+                        تنبيه: يمكنك إلغاء أو تعديل الحجز قبل 48 ساعة من موعد الرحلة مجاناً.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3 class="section-head">3- اختيار وسيلة الدفع</h3>
+                    <div class="bank-info">
+
+    <div class="bank-header">
+        <img src="photos/alkuramin.jfif" alt="الكريمي" class="bank-logo">
+
+        <div>
+            <strong>بنك الكريمي</strong>
+            <p>طرق التحويل المتاحة</p>
+        </div>
+    </div>
+
+    <ul>
+        <li>ريال يمني: 30692682</li>
+        <li>ريال سعودي: 36926929</li>
+        <li>دولار أمريكي: 36925399</li>
+    </ul>
+
+</div>
+                    <div class="custom-file-upload">
+    <label for="receipt-upload" class="upload-label">
+        📎 ارفع سند التحويل
+    </label>
+
+    <input 
+        type="file" 
+        id="receipt-upload"
+        accept="image/*"
+        required
+    >
+</div>
+                </div>
+
+                <button type="submit" class="confirm-btn">تأكيد الطلب الآن</button>
+
+                <p class="final-msg">سيتواصل معك فريقنا فور استلام طلبك وتدقيقه.</p>
+                <div class="help-box">
+                    لأي استفسار أو مشكلة، اتصل بنا: <strong>739307165</strong>
+                </div>
+            </form>
+        </main>
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>
+            وجهة
+        </h2>
+
+        <p>
+            رحلتك تبدأ من هنا
+            <br>
+            اكتشف اليمن بطريقة مختلفة
+        </p>
+
+        
+
+        <div class="footer-bottom">
+
+            © 2026 Wajha. جميع الحقوق محفوظة.
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="javascript/form.js"></script>
+</body>
+</html>
