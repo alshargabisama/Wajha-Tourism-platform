@@ -43,7 +43,7 @@ Wajha-Tourism-Platform/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/YourUsername/wajha-tourism-platform.git
+git clone https://github.com/alshargabisama/Wajha-Tourism-platform.git
 ```
 
 ### Open the project
